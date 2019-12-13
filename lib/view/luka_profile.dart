@@ -9,11 +9,11 @@ class LukaProfile extends StatelessWidget {
     // TODO: implement build
     return SizedBox(
       width: double.infinity,
-      height: 200,
+      height: 250,
       child: Stack(
         children: <Widget>[
           Container(
-          height: 200,
+          height: 300,
           decoration: BoxDecoration(
               color: Colors.blue,
               image: DecorationImage(
@@ -25,7 +25,7 @@ class LukaProfile extends StatelessWidget {
             ),
           ),
           Container(
-          height: 200,
+          height: 300,
           color: Colors.black54.withOpacity(0.8)
           ),
           Row(
@@ -69,11 +69,10 @@ class LukaProfile extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.white
-                              
                             ),
                           )
                         ],
-                        ),
+                      ),
                     )
                   ],
                 ),

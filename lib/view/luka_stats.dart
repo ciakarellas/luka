@@ -10,22 +10,21 @@ class LukaStats extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     final lukaStatsProvider = Provider.of<LukaStatsProvider>(context);
-    
-    return Container(
-            margin: EdgeInsets.all(8.0),
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Text(lukaStatsProvider.points.toString()),
-                  FlatButton(
-                    child: Icon(Icons.add),
-                    onPressed: () {
-                      lukaStatsProvider.updatePointsData();
-                    },
-                  )
-                ],
-              ),
-            ),
-          );
+    if(lukaStatsProvider.points == null || lukaStatsProvider.rebounds == null || lukaStatsProvider.asists == null){lukaStatsProvider.updatePointsData();}
+    return DataTable(
+      columns: [
+        DataColumn(label: Text("AVG PTS")),
+        DataColumn(label: Text("AVG REB")),
+        DataColumn(label: Text("AVG AST")),
+      ],
+      rows: [DataRow(
+        cells: [
+          DataCell(Text(lukaStatsProvider.points.toString())),
+          DataCell(Text(lukaStatsProvider.rebounds.toString())),
+          DataCell(Text(lukaStatsProvider.asists.toString())),
+          ]
+      )],
+    );
+          
   }
 }

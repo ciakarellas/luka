@@ -12,14 +12,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-          body: SafeArea(
-            child: Column(
-              children: <Widget>[
-                LukaProfile(),
-                LukaStats(),
-              ],
-            ),
-          )
-        );
+      body: Column(
+          children: <Widget>[
+            LukaProfile(),
+            LukaStats(),
+          ],
+        ),
+      );
   }
 }

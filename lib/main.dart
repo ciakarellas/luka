@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
         builder: (context) => LukaStatsProvider(),
         child: MaterialApp(
-          title: 'Luka triple stats',
+          darkTheme: ThemeData(
+            brightness: Brightness.dark,
+          ),
+          title: 'Luka triple stats', 
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),

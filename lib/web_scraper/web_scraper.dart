@@ -10,9 +10,13 @@ Future initiate() async {
   
   var document = parse(response.body);
   print(document);
-  List partOfHtml = document.querySelectorAll('div.player-stats__pts > a > span');
+  List points = document.querySelectorAll('div.player-stats__pts > a > span');
+  List rebounds = document.querySelectorAll('div.player-stats__reb > a > span');
+  List asists = document.querySelectorAll('div.player-stats__ast > a > span');
   List allStatsList = [];
-  allStatsList.add(partOfHtml[0].text);
+  allStatsList.add(points[0].text);
+  allStatsList.add(rebounds[0].text);
+  allStatsList.add(asists[0].text);
 
   return allStatsList;
 }
