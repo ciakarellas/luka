@@ -14,7 +14,6 @@ class LukaProfile extends StatelessWidget {
         children: <Widget>[
           Container(
           height: 200,
-          //padding: EdgeInsets.all(0),
           decoration: BoxDecoration(
               color: Colors.blue,
               image: DecorationImage(
@@ -27,19 +26,60 @@ class LukaProfile extends StatelessWidget {
           ),
           Container(
           height: 200,
-          //padding: EdgeInsets.all(0),
           color: Colors.black54.withOpacity(0.8)
           ),
-            Align(
-              alignment: Alignment.bottomLeft,
-              child: Container(
-                child: new Image.asset(
-                  "assets/images/Luka_Doncic.png",
-                  height: 150.0,
-                  fit: BoxFit.cover,
+          Row(
+            children: <Widget>[
+              Align(
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  child: new Image.asset(
+                    "assets/images/Luka_Doncic.png",
+                    height: 170.0,
+                    fit: BoxFit.cover,
+                ),
+                ),
               ),
-              ),
-            ),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      "#77",
+                      style: TextStyle(
+                        fontSize: 50,
+                        color: Colors.white
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 8),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            'Luka',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                            )
+                          ),
+                          Text(
+                            'Doncic',
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white
+                              
+                            ),
+                          )
+                        ],
+                        ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          )
         ] 
       ),
     );
