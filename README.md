@@ -1,6 +1,6 @@
 # luka
 
-A new Flutter project.
+So far, Luka Doncic is playing at a level that no one has played in NBA in a long time. As far as I know, nobody has ever had a stats in the last season at the level of triple double. The purpose for this app is to check if Luka can make this great stats through all regular season.
 
 ## Getting Started
 
