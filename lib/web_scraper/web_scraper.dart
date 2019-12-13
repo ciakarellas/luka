@@ -10,9 +10,9 @@ Future initiate() async {
   
   var document = parse(response.body);
   print(document);
-  List part_of_html = document.querySelectorAll('div.player-stats__pts > a > span');
+  List partOfHtml = document.querySelectorAll('div.player-stats__pts > a > span');
   List allStatsList = [];
-  allStatsList.add(part_of_html[0].text);
+  allStatsList.add(partOfHtml[0].text);
 
   return allStatsList;
 }

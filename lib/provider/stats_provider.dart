@@ -8,7 +8,7 @@ void main(){
 
 }
 
-class LukaStats extends ChangeNotifier {
+class LukaStatsProvider extends ChangeNotifier {
 
   var _points, _rebounds, _asists;
 
@@ -16,7 +16,7 @@ class LukaStats extends ChangeNotifier {
 
   void updatePointsData() async {
     var stats = await lukaStats.initiate();
-    _points = double.parse(stats[0]).round();
+    _points = double.parse(stats[0]);
     notifyListeners();
   }
   
